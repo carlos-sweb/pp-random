@@ -4,7 +4,7 @@
   "description": "Function for get random text, number or anythings",
   "main": "pp-random.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "terser --output pp-random.min.js --compress --mangle --comments false -- pp-random.js"
   },
   "repository": {
     "type": "git",
