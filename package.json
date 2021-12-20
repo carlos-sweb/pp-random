@@ -1,0 +1,23 @@
+{
+  "name": "pp-random",
+  "version": "1.0.0",
+  "description": "Function for get random text, number or anythings",
+  "main": "pp-random.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-sweb/pp-random.git"
+  },
+  "keywords": [
+    "random",
+    "generate"
+  ],
+  "author": "Carlos Illesca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlos-sweb/pp-random/issues"
+  },
+  "homepage": "https://github.com/carlos-sweb/pp-random#readme"
+}
