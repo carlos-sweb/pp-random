@@ -1,7 +1,7 @@
 /*!!
  * Power Panel Randon <https://github.com/carlos-sweb/pp-randon>
  * @author Carlos Illesca
- * @version 1.0.0 (2020/12/20 16:37 PM)
+ * @version 1.0.1 (2020/12/20 18:52 PM)
  * Released under the MIT License
  */
 (function(global,factory){

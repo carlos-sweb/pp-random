@@ -1,6 +1,6 @@
 {
   "name": "pp-random",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Function for get random text, number or anythings",
   "main": "pp-random.js",
   "scripts": {

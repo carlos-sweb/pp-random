@@ -27,4 +27,4 @@ var symbols = ppRandom(10, false, false, true);
 
 
 ```
-[See Exmaple](https://pp-random.netlify.app)
+[See example](https://pp-random.netlify.app)
