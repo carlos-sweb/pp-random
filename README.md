@@ -20,10 +20,11 @@ npm i pp-random --save
 
 ```javascript
 
-var letterOnly = ppRandom( 10 ); 
+var letterOnly = ppRandom( 10 );
 var letterAndNumber = ppRandom(10, true , true);
 var numberOnly = ppRandom(10 , false , true );
 var symbols = ppRandom(10, false, false, true);
 
 
 ```
+[https://pp-random.netlify.app](See Exmaple)
