@@ -1,9 +1,10 @@
 {
   "name": "pp-random",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Function for get random text, number or anythings",
-  "main": "pp-random.js",
+  "main": "dist/pp-random.min.js",
   "scripts": {
+    "build":"rollup -c && terser --output ./dist/pp-random.min.js --compress --mangle --comments false -- ./dist/pp-random.rollup.js",
     "compile": "terser --output pp-random.min.js --compress --mangle --comments false -- pp-random.js"
   },
   "repository": {
@@ -12,7 +13,10 @@
   },
   "keywords": [
     "random",
-    "generate"
+    "generate",
+    "random number",
+    "random letter",
+    "random symbols"
   ],
   "author": "Carlos Illesca",
   "license": "MIT",

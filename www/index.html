@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <title>pp-randon</title>
+  <style>
+    #code{            
+        color:#546E7A;
+        padding:4px 20px 4px 20px;
+        border-radius:90px;        
+        display:block;
+        float:left;
+        min-width:250px;
+        height:65px;
+        font-size:36px;
+    }
+    select,input[type=text]{
+      max-width:450px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="column">
+          <br>
+          <h1>pp-random</h1>          
+          <h3 class="title">Simple Function for get random text, number or anythinks</h3>          
+        </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <p>Result:</p>
+          <span id="code"></span>
+      </div>
+    </div>        
+    <br>
+    <div class="row">
+      <div class="column">
+          <form id="generate" >            
+              <div class="row">
+                <div class="column">
+                  <label for="min">Max Length</label>
+                  <select id="length" name="length">
+                      <option value="10">10</option>
+                      <option value="15" selected >15</option>
+                      <option value="20">20</option>
+                      <option value="30" >30</option>                      
+                  </select>
+                  <label for="upperCase">Letter upperCase</label>
+                  <input id="upperCase" value="upperCase" type="checkbox" checked name="upperCase" />
+                  <label for="lowerCase">Letter lowerCase</label>
+                  <input id="lowerCase" value="lowerCase" type="checkbox" checked name="lowerCase" />
+                  <label for="number">Number</label>
+                  <input id="number" value="number" type="checkbox" checked name="number" />
+                  <label for="symbols">Symbols</label>
+                  <input id="symbols" value="symbols" type="checkbox" checked name="symbols" />
+                  <label for="excludes">Excludes:</label>
+                  <input id="excludes" value="" type="text" checked name="excludes" />
+                </div>
+              </div>
+
+              <button type="submit" class="button-primary"  >Generate</button>
+            
+          </form>
+        </div>        
+    </div>    
+  </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pp-random@latest/pp-random.js" ></script>
+<script type="text/javascript" >
+  var form = document.getElementById('generate');
+  var code = document.getElementById('code');
+  form.addEventListener('submit', function( event ){
+      event.preventDefault();
+      const formData = new FormData(event.target),
+      length = parseInt(formData.get('length')),
+      upperCase = formData.get('upperCase') === 'upperCase' ? true : false,
+      lowerCase = formData.get('lowerCase') === 'lowerCase' ? true : false,
+      number = formData.get('number') === 'number' ? true : false,
+      symbols = formData.get('symbols') === 'symbols' ? true : false,
+      excludes = formData.get('excludes') !== "" ? formData.get('excludes').split('') : [];
+      
+      code.innerText = ppRandom( length , {
+        'upperCase':upperCase, 
+        'lowerCase':lowerCase, 
+        'number':number ,
+        'symbols':symbols ,
+        'exclude':excludes
+      }).get();
+      // Procesamos el codigo
+  });
+  // ===========================================================================
+</script>
+</body>
+</html>
