@@ -7,7 +7,7 @@
 In the web project include pp-random with:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/pp-random@latest/pp-random.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/pp-random/dist/pp-random.min.js" ></script>
 ```
 
 Or
@@ -26,9 +26,9 @@ const len = 30
 // Default options
 const opt = { 
 	number  : true ,
-   letter  : true ,
+	letter  : true ,
 	symbols : true ,
-   exclude : []
+	exclude : []
 }
 const test1 = random(20).get()
 const test1 = random( len , opt ).get()
